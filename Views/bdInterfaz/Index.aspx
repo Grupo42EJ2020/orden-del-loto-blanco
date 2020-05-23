@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Pia Desarrollo de Software</title>
+    <title>Index</title>
     <style type="text/css">
     html, body
     {
@@ -16,8 +16,7 @@
     a:link, a:visited{
     text-decoration: none;
     padding: 20px;
-    font-family: Bookman;
-    text-transform: uppercase;
+    font-family: Bookman
     padding-left: 10px;
     padding-right: 10px;
     font-weight: 200;
@@ -40,18 +39,11 @@
 </head>
 <body>
 <center>
-    <h1>
-    Producto Integrador de Aprendizaje 👍
+    <h1>Base de Datos
     </h1>
-    
-    
-    <a href="/Empleado/ObtenerEmpleado">Empleados</a>
-    <a href="">Videos</a>
-    <a href="/Tema/ObtenerTema">Temas</a>
-    <a href="">Cursos</a>
-    <a href="">Tema, Curso</a>
-    <a href="">Tema, Curso, Video</a>
+    <hr />
+    <a href="/Empleado/ObtenerEmpleado">Empleado</a>
+
 </center>
-    
 </body>
 </html>
