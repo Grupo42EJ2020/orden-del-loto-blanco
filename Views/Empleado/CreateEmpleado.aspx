@@ -38,7 +38,7 @@
     <% } %>
 
     <div>
-        <a href="/Home/Index">Regresar</a>
+        <a href="/Empleado/ObtenerEmpleado">Regresar</a>
     </div>
 
 </body>

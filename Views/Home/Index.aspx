@@ -46,7 +46,7 @@
     
     
     <a href="/Empleado/ObtenerEmpleado">Empleados</a>
-    <a href="">Videos</a>
+    <a href="/Video/ObtenerVideos">Videos</a>
     <a href="/Tema/ObtenerTema">Temas</a>
     <a href="">Cursos</a>
     <a href="">Tema, Curso</a>
