@@ -6,35 +6,19 @@
 <head runat="server">
     <title>Pia Desarrollo de Software</title>
     <style type="text/css">
-    html, body
-    {
+    #Power-Contenedor{
     width: 100%;
-    height: 110%; 
-    background: #FFFFFF;
-    font-family: Bookman; 
+    text-align: center;
     }
-    a:link, a:visited{
+
+    #Anyadir-Rutina-btn {
+    background-color: #21211d;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 20px;
     text-decoration: none;
-    padding: 20px;
-    font-family: Bookman;
-    text-transform: uppercase;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-weight: 200;
-    font-size: 25px;
-    color: black;
-    width:120px;
-    height:25px;
-    text-align:center;
-    display: inline-block;
-    margin: 20px 20px 0 20px;
-    background-color: #0CB38E;
-    }
-    a:hover{
-    color: #4c5557;
-    background-color: #0CB38E;
-    text-decoration: none;
-    }           
+    cursor: pointer;
+    }       
     
     </style>
 </head>
@@ -44,13 +28,49 @@
     Producto Integrador de Aprendizaje 👍
     </h1>
     
-    
-    <a href="/Empleado/ObtenerEmpleado">Empleados</a>
-    <a href="/Video/ObtenerVideos">Videos</a>
-    <a href="/Tema/ObtenerTema">Temas</a>
-    <a href="">Cursos</a>
-    <a href="">Tema, Curso</a>
-    <a href="">Tema, Curso, Video</a>
+    <br />
+    <div id="Power-Contenedor">
+
+    <a href="/Empleado/ObtenerEmpleado" id="Anyadir-Rutina-btn"> Añadir Empleado </a>
+
+    </div>
+    <br />
+    <br />
+    <div id="Power-Contenedor">
+
+    <a href="/Video/ObtenerVideos" id="Anyadir-Rutina-btn"> Añadir Video </a>
+
+    </div>
+    <br />
+    <br />
+    <div id="Power-Contenedor">
+
+    <a href="/Tema/ObtenerTema" id="Anyadir-Rutina-btn"> Añadir Tema </a>
+
+    </div>
+    <br />
+    <br />
+    <div id="Power-Contenedor">
+
+    <a href="" id="Anyadir-Rutina-btn"> Curso </a>
+
+    </div>
+    <br />
+    <br />
+    <div id="Power-Contenedor">
+
+    <a href="" id="Anyadir-Rutina-btn"> Tema, Curso </a>
+
+    </div>
+    <br />
+    <br />
+    <div id="Power-Contenedor">
+
+    <a href="" id="Anyadir-Rutina-btn"> Tema, Curso, Video </a>
+
+    </div>
+    <br />
+    <br />
 </center>
     
 </body>
