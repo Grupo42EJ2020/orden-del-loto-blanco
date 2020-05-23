@@ -1,0 +1,10 @@
+C:\Users\anton\Documents\DesarrolloPia\orden-del-loto-blanco\bin\MVCLaboratorio.dll
+C:\Users\anton\Documents\DesarrolloPia\orden-del-loto-blanco\bin\MVCLaboratorio.pdb
+C:\Users\anton\Documents\DesarrolloPia\orden-del-loto-blanco\obj\Debug\MVCLaboratorio.dll
+C:\Users\anton\Documents\DesarrolloPia\orden-del-loto-blanco\obj\Debug\MVCLaboratorio.pdb
+C:\Users\aldo_\Desktop\orden-del-loto-blanco\bin\MVCLaboratorio.dll
+C:\Users\aldo_\Desktop\orden-del-loto-blanco\bin\MVCLaboratorio.pdb
+C:\Users\aldo_\Desktop\orden-del-loto-blanco\obj\Debug\MVCLaboratorio.dll
+C:\Users\aldo_\Desktop\orden-del-loto-blanco\obj\Debug\MVCLaboratorio.pdb
+C:\Users\aldo_\Desktop\orden-del-loto-blanco\obj\Debug\MVCLaboratorio.csprojResolveAssemblyReference.cache
+C:\Users\anton\Documents\DesarrolloPia\orden-del-loto-blanco\obj\Debug\MVCLaboratorio.csprojResolveAssemblyReference.cache
