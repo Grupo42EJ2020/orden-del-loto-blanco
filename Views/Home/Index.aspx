@@ -66,7 +66,7 @@
     <br />
     <div id="Power-Contenedor">
 
-    <a href="" id="Anyadir-Rutina-btn"> Tema, Curso, Video </a>
+    <a href="/Curso_Tema_Video/ObtenerCTV" id="Anyadir-Rutina-btn"> Tema, Curso, Video </a>
 
     </div>
     <br />
