@@ -42,7 +42,7 @@ namespace MVCLaboratorio.Models
             DataTable dtCTV;
             List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(new SqlParameter("@IdCTV", idCTV));
-            dtCTV = BaseHelper.ejecutarConsulta("sp_Consultar_Curso_Tema__VideoPorID", CommandType.StoredProcedure);
+            dtCTV = BaseHelper.ejecutarConsulta("sp_Consultar_Curso_Tema__VideoPorID", CommandType.StoredProcedure, parametros);
 
             //convertir el dtVideo a un objeto Video
             Curso_Tema_Video datosCTV = new Curso_Tema_Video();

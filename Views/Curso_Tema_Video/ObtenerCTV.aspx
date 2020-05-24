@@ -25,7 +25,7 @@
     
         <tr>
             <td>
-                <%: Html.ActionLink("Edit", "CTVEdit", new {  id=item.idCTV }) %> |
+                <%: Html.ActionLink("Edit", "CTVEdit", new { id = item.idCTV })%> |
                 <%: Html.ActionLink("Details", "CTVDetails", new { id = item.idCTV })%> |
                 <%: Html.ActionLink("Delete", "CTVDelete", new { id = item.idCTV })%>
             </td>

@@ -30,14 +30,14 @@ namespace MVCLaboratorio.Controllers
         }
 
         [HttpPost]
-        public ActionResult VideoDelete(int id, FormCollection datos)
+        public ActionResult CTVDelete(int id, FormCollection datosCTV)
         {
             //realizar el delete del registro
             repoCTV.eliminarCTV(id);
 
             return RedirectToAction("ObtenerCTV");
         }
-        public ActionResult VideoDetails(int id)
+        public ActionResult CTVDetails(int id)
         {
             return View(repoCTV.obtenerCTV(id));
         }
@@ -62,9 +62,9 @@ namespace MVCLaboratorio.Controllers
         }
 
         [HttpPost]
-        public ActionResult CTVCreate(Curso_Tema_Video datos)
+        public ActionResult CTVCreate(Curso_Tema_Video datosCTV)
         {
-            repoCTV.insertarCTV(datos);
+            repoCTV.insertarCTV(datosCTV);
             return RedirectToAction("ObtenerCTV");
         }
 
