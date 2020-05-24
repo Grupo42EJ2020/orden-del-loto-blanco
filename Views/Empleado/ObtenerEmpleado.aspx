@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>ObtenerEmpleado</title>
+    <link href="../../Content/EnlaceBoton.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <table>
@@ -25,9 +26,10 @@
     
         <tr>
             <td>
-                <%: Html.ActionLink("Edit", "EditEmpleado", new { id=item.idEmpleado }) %> |
-                <%: Html.ActionLink("Details", "DetailsEmpleado", new { id = item.idEmpleado })%> |
-                <%: Html.ActionLink("Delete", "DeleteEmpleado", new { id = item.idEmpleado })%>
+
+                <%: Html.ActionLink("Edit", "EditEmpleado", new { id = item.idEmpleado }, new { @class = "enlaceboton" })%>  |
+                <%: Html.ActionLink("Details", "DetailsEmpleado", new { id = item.idEmpleado }, new { @class = "enlaceboton" })%> |
+                <%: Html.ActionLink("Delete", "DeleteEmpleado", new { id = item.idEmpleado }, new { @class = "enlaceboton" })%>
             </td>
             <td>
                 <%: item.idEmpleado %>
@@ -44,11 +46,11 @@
 
     </table>
     <p>
-        <%: Html.ActionLink("Nuevo Empleado", "CreateEmpleado") %>
+        <a href="/Empleado/CreateEmpleado" class=enlaceboton>Nuevo empleado</a>
     </p>
 
     <p>
-        <a href="/Home/Index">Regresar</a>
+        <a href="/Home/Index" class=enlaceboton>Regresar</a>
     </p>
 
 </body>
