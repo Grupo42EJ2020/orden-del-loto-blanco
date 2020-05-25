@@ -52,7 +52,7 @@
     <br />
     <div id="Power-Contenedor">
 
-    <a href="" id="Anyadir-Rutina-btn"> Curso </a>
+    <a href="/Curso/ObtenerCurso" id="Anyadir-Rutina-btn"> Añadir Curso </a>
 
     </div>
     <br />

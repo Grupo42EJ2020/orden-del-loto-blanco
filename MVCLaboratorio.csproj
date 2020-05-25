@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CursoController.cs" />
     <Compile Include="Controllers\Curso_Tema_VideoController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -74,13 +75,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Curso.cs" />
     <Compile Include="Models\Curso_Tema_Video.cs" />
     <Compile Include="Models\Empleado.cs" />
+    <Compile Include="Models\ICurso.cs" />
     <Compile Include="Models\ICurso_Tema_Video.cs" />
     <Compile Include="Models\IEmpleado.cs" />
     <Compile Include="Models\ITema.cs" />
     <Compile Include="Models\IVideo.cs" />
     <Compile Include="Models\RepositorioCTV.cs" />
+    <Compile Include="Models\RepositorioCurso.cs" />
     <Compile Include="Models\RepositorioEmpleado.cs" />
     <Compile Include="Models\RepositorioTema.cs" />
     <Compile Include="Models\RepositorioVideo.cs" />
@@ -94,6 +98,10 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Views\bdInterfaz\Index.aspx" />
+    <Content Include="Views\Curso\CursoCreate.aspx" />
+    <Content Include="Views\Curso\CursoDelete.aspx" />
+    <Content Include="Views\Curso\CursoDetails.aspx" />
+    <Content Include="Views\Curso\CursoEdit.aspx" />
     <Content Include="Views\Curso_Tema_Video\CTVCreate.aspx" />
     <Content Include="Views\Curso_Tema_Video\CTVDelete.aspx" />
     <Content Include="Views\Curso_Tema_Video\CTVDetails.aspx" />
@@ -137,7 +145,9 @@
     <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\App_LocalResources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

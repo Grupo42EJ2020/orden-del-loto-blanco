@@ -24,6 +24,7 @@
     </style>
 </head>
 <body>
+
     <% using (Html.BeginForm()) {%>
         <%: Html.ValidationSummary(true) %>
 
