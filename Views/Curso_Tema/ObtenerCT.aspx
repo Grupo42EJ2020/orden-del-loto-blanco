@@ -4,11 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>ObtenerCursos</title>
-
-</head>
-<body></body>
-    <title>Ver todos los cursos</title>
+    <title>ObtenerCT</title>
 </head>
 <body>
     
@@ -17,30 +13,33 @@
         <tr>
             <th></th>
             <th>
+                IdCT
+            </th>
+            <th>
                 IdCurso
             </th>
             <th>
-                Descripcion
-            </th>          
-            
+                IdTema
+            </th>
         </tr>
 
     <% foreach (var item in Model) { %>
     
         <tr>
             <td>
-                <%: Html.ActionLink("Editar", "CursoEdit", new { id = item.IdCurso })%> |
-                <%: Html.ActionLink("Detalles", "CursoDetails", new { id = item.IdCurso })%> |
-                <%: Html.ActionLink("Borrar", "CursoDelete", new { id = item.IdCurso })%>
+                <%: Html.ActionLink("Edit", "CTCreate", new { id = item.IdCT })%> |
+                <%: Html.ActionLink("Details", "CTDetails", new { id = item.IdCurso })%> |
+                <%: Html.ActionLink("Delete", "CTDelete", new { id = item.IdTema })%>
             </td>
             <td>
-                <%: item.IdCurso%>
+                <%: item.IdCT %>
             </td>
             <td>
-                <%: item.IdCurso%>
+                <%: item.IdCurso %>
             </td>
-           
-            
+            <td>
+                <%: item.IdTema %>
+            </td>
         </tr>
     
     <% } %>
@@ -48,9 +47,11 @@
     </table>
 
     <p>
-        <%: Html.ActionLink("Agregar un nuevo curso", "CursoCreate")%>
+        <%: Html.ActionLink("Agregar Curso_Tema", "CTCreate") %>
+        </p>
+        <p>
+        <a href="/Home/Index">Regresar</a>
     </p>
-    <a href="/Home/Index">Regresar</a>
 
 
 

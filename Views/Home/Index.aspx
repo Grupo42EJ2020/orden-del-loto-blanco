@@ -59,12 +59,11 @@
     <br />
     <div id="Power-Contenedor">
 
-    <a href="" id="Anyadir-Rutina-btn"> Tema, Curso </a>
+    <a href="/Curso_Tema/ObtenerCT" id="Anyadir-Rutina-btn"> Tema, Curso</a>
 
     </div>
     <br />
     <br />
-    <div id="Power-Contenedor">
 
     <a href="/Curso_Tema_Video/ObtenerCTV" id="Anyadir-Rutina-btn"> Tema, Curso, Video </a>
 

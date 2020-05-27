@@ -24,7 +24,9 @@
     <% using (Html.BeginForm()) { %>
         <% } %>
         <p>
-		    <input type="submit" value="Delete" /> |
+		    <input type="submit" value="Delete" /> 
+            </p>
+            <p>
 		    <a href="/Curso/ObtenerCursos">Regresar</a>
         </p>
 </body>
