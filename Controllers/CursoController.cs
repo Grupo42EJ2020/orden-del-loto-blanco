@@ -36,10 +36,18 @@ namespace MVCLaboratorio.Controllers
         [HttpPost]
         public ActionResult CursoDelete(int id, FormCollection datos)
         {
-            //realizar el delete del registro
+            try
+            {
+                //realizar el delete del registro
             repoCurso.deleteCurso(id);
 
             return RedirectToAction("ObtenerCursos");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("ObtenerCursos");
+                throw;
+            }
         }
 
         public ActionResult CursoDetails(int id)
@@ -56,10 +64,18 @@ namespace MVCLaboratorio.Controllers
         [HttpPost]
         public ActionResult CursoEdit(int id, Curso datosCurso)
         {
-            datosCurso.IdCurso = id;
+            try
+            {
+                datosCurso.IdCurso = id;
             repoCurso.editCurso(datosCurso);
 
             return RedirectToAction("ObtenerCursos");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("ObtenerCursos");
+                throw;
+            }
         }
 
         public ActionResult CursoCreate()
@@ -71,8 +87,16 @@ namespace MVCLaboratorio.Controllers
         [HttpPost]
         public ActionResult CursoCreate(Curso datos)
         {
-            repoCurso.createCurso(datos);
+            try
+            {
+                repoCurso.createCurso(datos);
             return RedirectToAction("ObtenerCursos");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("ObtenerCursos");
+                throw;
+            }
         }
 
     }

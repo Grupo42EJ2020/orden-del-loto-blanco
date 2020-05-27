@@ -34,10 +34,18 @@ namespace MVCLaboratorio.Controllers
         [HttpPost]
         public ActionResult VideoDelete(int id, FormCollection datos)
         {
-            //realizar el delete del registro
+            try
+            {
+                //realizar el delete del registro
             repoVideo.eliminarVideo(id);
 
             return RedirectToAction("ObtenerVideos");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("ObtenerVideos");
+                throw;
+            }
         }
 
         public ActionResult VideoDetails(int id)
@@ -54,10 +62,18 @@ namespace MVCLaboratorio.Controllers
         [HttpPost]
         public ActionResult VideoEdit(int id, Video datosVideo)
         {
-            datosVideo.IdVideo = id;
+            try
+            {
+                 datosVideo.IdVideo = id;
             repoVideo.actualizarVideo(datosVideo);
 
             return RedirectToAction("ObtenerVideos");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("ObtenerVideos");
+                throw;
+            }
         }
 
         public ActionResult VideoCreate()
@@ -69,8 +85,16 @@ namespace MVCLaboratorio.Controllers
         [HttpPost]
         public ActionResult VideoCreate(Video datos)
         {
-            repoVideo.insertarVideo(datos);
+            try
+            {
+                repoVideo.insertarVideo(datos);
             return RedirectToAction("ObtenerVideos");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("ObtenerVideos");
+                throw;
+            }
         }
 
     }

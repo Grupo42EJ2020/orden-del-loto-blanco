@@ -53,10 +53,18 @@ namespace MVCLaboratorio.Controllers
         public ActionResult DeleteEmpleado(int id, FormCollection datos)
         {
 
-            List<SqlParameter> parametros = new List<SqlParameter>();
+            try
+            {
+                List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(new SqlParameter("@IdEmpleado", id));
             BaseHelper.ejecutarConsulta("sp_Eliminar_Empleado", CommandType.StoredProcedure, parametros);
             return RedirectToAction("obtenerEmpleado");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("obtenerEmpleado");
+                throw;
+            }
         }
 
         public ActionResult DetailsEmpleado(int id)
@@ -105,7 +113,9 @@ namespace MVCLaboratorio.Controllers
         [HttpPost]
         public ActionResult EditEmpleado(int Id, Empleado datosEmpleado)
         {
-            List<SqlParameter> parametros = new List<SqlParameter>();
+            try
+            {
+                List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(new SqlParameter("@IdEmpleado", Id));
             parametros.Add(new SqlParameter("@Nombre", datosEmpleado.nombre));
             parametros.Add(new SqlParameter("@Direccion", datosEmpleado.direccion));
@@ -113,6 +123,12 @@ namespace MVCLaboratorio.Controllers
             BaseHelper.ejecutarConsulta("sp_Actualizar_Empleado", CommandType.StoredProcedure, parametros);
 
             return RedirectToAction("obtenerEmpleado");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("obtenerEmpleado");
+                throw;
+            }
         }
 
         public ActionResult CreateEmpleado()
@@ -124,8 +140,16 @@ namespace MVCLaboratorio.Controllers
         [HttpPost]
         public ActionResult CreateEmpleado(Empleado datos)
         {
-            repoEmpleado.createEmpleado(datos);
+            try
+            {
+                repoEmpleado.createEmpleado(datos);
             return RedirectToAction("obtenerEmpleado");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("obtenerEmpleado");
+                throw;
+            }
         }
 
     }

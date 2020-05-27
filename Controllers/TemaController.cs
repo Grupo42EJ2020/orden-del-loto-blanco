@@ -52,10 +52,18 @@ namespace MVCLaboratorio.Controllers
         public ActionResult DeleteTema(int id, FormCollection datos)
         {
 
-            List<SqlParameter> parametros = new List<SqlParameter>();
+            try
+            {
+                List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(new SqlParameter("@IdTema", id));
             BaseHelper.ejecutarConsulta("sp_Eliminar_Tema", CommandType.StoredProcedure, parametros);
             return RedirectToAction("obtenerTema");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("obtenerTema");
+                throw;
+            }
         }
 
         public ActionResult DetailsTema(int id)
@@ -102,13 +110,21 @@ namespace MVCLaboratorio.Controllers
         [HttpPost]
         public ActionResult EditTema(int Id, Tema datosTema)
         {
-            List<SqlParameter> parametros = new List<SqlParameter>();
+            try
+            {
+                List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(new SqlParameter("@IdTema", Id));
             parametros.Add(new SqlParameter("@Nombre", datosTema.nombre));
 
             BaseHelper.ejecutarConsulta("sp_Actualizar_Tema", CommandType.StoredProcedure, parametros);
 
             return RedirectToAction("obtenerTema");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("obtenerTema");
+                throw;
+            }
         }
 
         public ActionResult CreateTema()
@@ -120,8 +136,16 @@ namespace MVCLaboratorio.Controllers
         [HttpPost]
         public ActionResult CreateTema(Tema datos)
         {
-            repoTema.createTema(datos);
+            try
+            {
+                repoTema.createTema(datos);
             return RedirectToAction("obtenerTema");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("obtenerTema");
+                throw;
+            }
         }
 
     }

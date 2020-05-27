@@ -32,10 +32,18 @@ namespace MVCLaboratorio.Controllers
         [HttpPost]
         public ActionResult CTVDelete(int id, FormCollection datosCTV)
         {
-            //realizar el delete del registro
+            try
+            {
+                //realizar el delete del registro
             repoCTV.eliminarCTV(id);
 
             return RedirectToAction("ObtenerCTV");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("ObtenerCTV");
+                throw;
+            }
         }
         public ActionResult CTVDetails(int id)
         {
@@ -50,10 +58,18 @@ namespace MVCLaboratorio.Controllers
         [HttpPost]
         public ActionResult CTVEdit(int id, Curso_Tema_Video datosCTV)
         {
-            datosCTV.idCTV = id;
+            try
+            {
+                datosCTV.idCTV = id;
             repoCTV.actualizarCTV(datosCTV);
 
             return RedirectToAction("ObtenerCTV");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("ObtenerCTV");
+                throw;
+            }
         }
         public ActionResult CTVCreate()
         {
@@ -64,8 +80,16 @@ namespace MVCLaboratorio.Controllers
         [HttpPost]
         public ActionResult CTVCreate(Curso_Tema_Video datosCTV)
         {
-            repoCTV.insertarCTV(datosCTV);
+            try
+            {
+                repoCTV.insertarCTV(datosCTV);
             return RedirectToAction("ObtenerCTV");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("ObtenerCTV");
+                throw;
+            }
         }
 
     }
