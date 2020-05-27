@@ -21,9 +21,9 @@ namespace MVCLaboratorio.Controllers
             return View();
         }
         //Muestra la lista de Videos
-        public ActionResult ObtenerCurso()
+        public ActionResult ObtenerCursos()
         {
-            return View(repoCurso.ObtenerCurso());
+            return View(repoCurso.ObtenerCursos());
         }
 
         // b o r r a r
@@ -39,7 +39,7 @@ namespace MVCLaboratorio.Controllers
             //realizar el delete del registro
             repoCurso.deleteCurso(id);
 
-            return RedirectToAction("ObtenerCurso");
+            return RedirectToAction("ObtenerCursos");
         }
 
         public ActionResult CursoDetails(int id)
@@ -56,10 +56,10 @@ namespace MVCLaboratorio.Controllers
         [HttpPost]
         public ActionResult CursoEdit(int id, Curso datosCurso)
         {
-            datosCurso.idCurso = id;
+            datosCurso.IdCurso = id;
             repoCurso.editCurso(datosCurso);
 
-            return RedirectToAction("ObtenerCurso");
+            return RedirectToAction("ObtenerCursos");
         }
 
         public ActionResult CursoCreate()
@@ -72,7 +72,7 @@ namespace MVCLaboratorio.Controllers
         public ActionResult CursoCreate(Curso datos)
         {
             repoCurso.createCurso(datos);
-            return RedirectToAction("ObtenerCurso");
+            return RedirectToAction("ObtenerCursos");
         }
 
     }

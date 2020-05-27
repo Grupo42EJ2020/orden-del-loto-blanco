@@ -8,10 +8,10 @@ namespace MVCLaboratorio.Models
 {
     public interface ICurso
     {
-        List<Curso> ObtenerCurso();
-        Curso ObtenerCurso(int idCurso);
+        List<Curso> ObtenerCursos();
+        Curso ObtenerCurso(int IdCurso);
         void createCurso(Curso datosCurso);
-        void deleteCurso(int idCurso);
+        void deleteCurso(int IdCurso);
         void editCurso(Curso datosCurso);
     }
 }

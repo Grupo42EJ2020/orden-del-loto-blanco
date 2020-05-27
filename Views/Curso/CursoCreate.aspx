@@ -19,11 +19,11 @@
             </div>
             
             <div class="editor-label">
-                <%: Html.LabelFor(model => model.idCurso) %>
+                <%: Html.LabelFor(model => model.IdCurso) %>
             </div>
             <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.idCurso) %>
-                <%: Html.ValidationMessageFor(model => model.idCurso)%>
+                <%: Html.TextBoxFor(model => model.IdCurso) %>
+                <%: Html.ValidationMessageFor(model => model.IdCurso)%>
             </div>
             
             <div class="editor-label">
@@ -35,11 +35,11 @@
             </div>
             
             <div class="editor-label">
-                <%: Html.LabelFor(model => model.idEmpleado) %>
+                <%: Html.LabelFor(model => model.IdEmpleado) %>
             </div>
             <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.idEmpleado)%>
-                <%: Html.ValidationMessageFor(model => model.idEmpleado)%>
+                <%: Html.TextBoxFor(model => model.IdEmpleado)%>
+                <%: Html.ValidationMessageFor(model => model.IdEmpleado)%>
             </div>
             
             <p>
@@ -54,7 +54,7 @@
         <br />
         <div id="Power-Contenedor">
 
-        <a href="/Curso/obtenerCurso" id="Anyadir-Rutina-btn"> Regresar </a>
+        <a href="/Curso/ObtenerCursos" id="Anyadir-Rutina-btn"> Regresar </a>
 
         </div>
         <br />

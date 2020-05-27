@@ -12,79 +12,85 @@ namespace MVCLaboratorio.Models
     public class RepositorioCurso : ICurso
     {
 
-     public List<Curso> ObtenerCurso()
-     {
-        DataTable dtCurso;
-            dtCurso = BaseHelper.ejecutarConsulta("sp_Curso_ConsultarTodo", CommandType.StoredProcedure);
+        public List<Curso> ObtenerCursos()
+        {
+            //implementar funcionalidad
+            //obtener la info de los videos de la BD
+            DataTable dtCursos;
+            dtCursos = BaseHelper.ejecutarConsulta("sp_Consultar_TodoCurso", CommandType.StoredProcedure);
 
-            List<Curso> lstCurso = new List<Curso>();
-            foreach (DataRow item in dtCurso.Rows)
+            List<Curso> lstCursos = new List<Curso>();
+
+            //convertir el DataTable a una lista de curso List<Curso>
+            foreach (DataRow item in dtCursos.Rows)
             {
-                Curso CursoAux = new Curso();
-                CursoAux.idCurso = int.Parse(item["idCurso"].ToString());
-                CursoAux.Descripcion = item["Descripcion"].ToString();
-                CursoAux.idEmpleado = int.Parse(item["idEmpleado"].ToString());
+                Curso cursoAux = new Curso();
+                cursoAux.IdCurso = int.Parse(item["IdCurso"].ToString());
+                cursoAux.Descripcion = item["Descripcion"].ToString();
+                cursoAux.IdEmpleado = int.Parse(item["IdEmpleado"].ToString());
 
-
-                lstCurso.Add(CursoAux);
+                lstCursos.Add(cursoAux);
             }
 
-            return lstCurso;
+            return lstCursos;
         }
 
 
-
-        public Curso ObtenerCurso(int idCurso)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void deleteCurso(int id)
-        {
-            List<SqlParameter> parametros = new List<SqlParameter>();
-            parametros.Add(new SqlParameter("@idCurso", id));
-
-            BaseHelper.ejecutarSentencia("sp_Eliminar_Curso", CommandType.StoredProcedure, parametros);
-
-        }
-        public Curso detailsCurso(int id)
+        public Curso ObtenerCurso(int IdCurso)
         {
             DataTable dtCurso;
             List<SqlParameter> parametros = new List<SqlParameter>();
-            parametros.Add(new SqlParameter("@idCurso", id));
+            parametros.Add(new SqlParameter("@IdCurso", IdCurso));
 
             dtCurso = BaseHelper.ejecutarConsulta("sp_Consultar_Curso_PorID", CommandType.StoredProcedure, parametros);
 
+            //convertir el dtCurso a un objeto Curso
             Curso datosCurso = new Curso();
 
-            if (dtCurso.Rows.Count > 0)
+            if (dtCurso.Rows.Count > 0) //si lo encontro
             {
-                datosCurso.idCurso = int.Parse(dtCurso.Rows[0]["idCurso"].ToString());
+                datosCurso.IdCurso = int.Parse(dtCurso.Rows[0]["IdCurso"].ToString());
                 datosCurso.Descripcion = dtCurso.Rows[0]["Descripcion"].ToString();
-                datosCurso.idEmpleado = int.Parse(dtCurso.Rows[0]["idEmpleado"].ToString());
+                datosCurso.IdEmpleado = int.Parse(dtCurso.Rows[0]["IdEmpleado"].ToString());
 
                 return datosCurso;
             }
             else
-            {
+            { //no lo encontro 
                 return null;
             }
         }
-        public void editCurso(Curso datosCurso)
-        {
-            List<SqlParameter> parametros = new List<SqlParameter>();
-            parametros.Add(new SqlParameter("@idCurso", datosCurso.idCurso));
-            parametros.Add(new SqlParameter("@Descripcion", datosCurso.Descripcion));
-            parametros.Add(new SqlParameter("@idEmpleado", datosCurso.idEmpleado));
 
-            BaseHelper.ejecutarConsulta("sp_Actualizar_Curso", CommandType.StoredProcedure, parametros);
-        }
         public void createCurso(Curso datosCurso)
         {
+            //realizar el update
             List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(new SqlParameter("@Descripcion", datosCurso.Descripcion));
-            parametros.Add(new SqlParameter("@idEmpleado", datosCurso.idEmpleado));
+            parametros.Add(new SqlParameter("@IdEmpleado", datosCurso.IdEmpleado));
+
             BaseHelper.ejecutarConsulta("sp_Agregar_Curso", CommandType.StoredProcedure, parametros);
+
+        }
+
+        public void deleteCurso(int IdCurso)
+        {
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("@IdCurso", IdCurso));
+
+            BaseHelper.ejecutarSentencia("sp_Eliminar_Curso", CommandType.StoredProcedure, parametros);
+
+        }
+
+        public void editCurso(Curso datosCurso)
+        {
+            //realizar el update
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("@IdCurso", datosCurso.IdCurso));
+            parametros.Add(new SqlParameter("@Descripcion", datosCurso.Descripcion));
+            parametros.Add(new SqlParameter("@IdEmpleado", datosCurso.IdEmpleado));
+
+            BaseHelper.ejecutarConsulta("sp_Actualizar_Curso", CommandType.StoredProcedure, parametros);
+
         }
     }
 }
