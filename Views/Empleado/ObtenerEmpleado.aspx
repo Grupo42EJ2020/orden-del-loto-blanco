@@ -5,17 +5,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>ObtenerEmpleado</title>
-    <link href="../../Content/EnlaceBoton.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    #Power-Contenedor{
+    width: 100%;
+    text-align: center;
+    }
+
+    #Anyadir-Rutina-btn {
+    background-color: #21211d;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    }       
+    
+    </style>
 </head>
 <body>
-    <table>
+    <table border="1" style="margin: 0 auto;">
         <tr>
             <th></th>
             <th>
-                IdEmpleado
+                Numero de empleado
             </th>
             <th>
-                Nombre
+                Nombre del empleado
             </th>
             <th>
                 Direccion
@@ -27,9 +42,9 @@
         <tr>
             <td>
 
-                <%: Html.ActionLink("Edit", "EditEmpleado", new { id = item.idEmpleado }, new { @class = "enlaceboton" })%>  |
-                <%: Html.ActionLink("Details", "DetailsEmpleado", new { id = item.idEmpleado }, new { @class = "enlaceboton" })%> |
-                <%: Html.ActionLink("Delete", "DeleteEmpleado", new { id = item.idEmpleado }, new { @class = "enlaceboton" })%>
+                <%: Html.ActionLink("Edit", "EditEmpleado", new { id = item.idEmpleado })%>  |
+                <%: Html.ActionLink("Details", "DetailsEmpleado", new { id = item.idEmpleado })%> |
+                <%: Html.ActionLink("Delete", "DeleteEmpleado", new { id = item.idEmpleado })%>
             </td>
             <td>
                 <%: item.idEmpleado %>
@@ -46,11 +61,21 @@
 
     </table>
     <p>
-        <a href="/Empleado/CreateEmpleado" class=enlaceboton>Nuevo empleado</a>
+        <br />
+        <br />
+        <div id="Power-Contenedor">
+        <a href="/Empleado/CreateEmpleado" id="Anyadir-Rutina-btn">Nuevo empleado</a>
+        <br />
+        <br />
     </p>
 
     <p>
-        <a href="/Home/Index" class=enlaceboton>Regresar</a>
+    <br />
+        <br />
+        <div id="Power-Contenedor">
+        <a href="/Home/Index" id="Anyadir-Rutina-btn" >Regresar</a>
+        <br />
+        <br />
     </p>
 
 </body>

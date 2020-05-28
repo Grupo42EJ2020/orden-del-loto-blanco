@@ -4,11 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>CTVDetails</title>
+    <title>Detalles CTV</title>
 </head>
 <body>
     <fieldset>
-        <legend>Fields</legend>
+        <legend>Datos</legend>
         
         <div class="display-label">idCTV</div>
         <div class="display-field"><%: Model.idCTV %></div>
@@ -22,7 +22,7 @@
     </fieldset>
     <p>
         
-        <%: Html.ActionLink("Regresar", "ObtenerCTV") %>
+        <<a href="/Curso_Tema_Video/ObtenerCTV">Regresar</a>
     </p>
 
 </body>

@@ -4,11 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>DetailsTema</title>
+    <title>Detalles tema</title>
 </head>
 <body>
     <fieldset>
-        <legend>Fields</legend>
+        <legend>Datos</legend>
         
         <div class="display-label">idTema</div>
         <div class="display-field"><%: Model.idTema %></div>
@@ -18,8 +18,8 @@
         
     </fieldset>
     <p>
-        <%: Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) %> |
-        <%: Html.ActionLink("Back to List", "obtenerEmpleado") %>
+        
+        <a href="/Tema/ObtenerTema">Regresar</a>
     </p>
 
 </body>

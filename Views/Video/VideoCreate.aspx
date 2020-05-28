@@ -4,8 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
+    <title>Agregar video</title>
     <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
-    <title>VideoCreate</title>
+    
     <style type="text/css">
     #Power-Contenedor{
     width: 100%;
@@ -58,7 +59,7 @@
             </div>
             
             <p>
-                <input type="submit" value="Create" />
+                <input type="submit" value="Agregar" />
             </p>
         </fieldset>
 

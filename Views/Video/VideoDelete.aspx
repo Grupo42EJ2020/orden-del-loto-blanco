@@ -4,12 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>VideoDelete</title>
+    <title>Eliminar video</title>
 </head>
 <body>
-    <h3>Are you sure you want to delete this?</h3>
+    <h3>Estas seguro de eliminar este video?</h3>
     <fieldset>
-        <legend>Fields</legend>
+        <legend>Datos</legend>
         
         <div class="display-label">IdVideo</div>
         <div class="display-field"><%: Model.IdVideo %></div>
@@ -26,7 +26,7 @@
     </fieldset>
     <% using (Html.BeginForm()) { %>
         <p>
-		    <input type="submit" value="Delete" /> |
+		    <input type="submit" value="Eliminar" /> |
 		    <a href="/Video/ObtenerVideos">Regresar</a>
         </p>
     <% } %>

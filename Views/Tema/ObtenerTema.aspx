@@ -5,15 +5,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>ObtenerTema</title>
+    <style type="text/css">
+    #Power-Contenedor{
+    width: 100%;
+    text-align: center;
+    }
+
+    #Anyadir-Rutina-btn {
+    background-color: #21211d;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    }       
+    
+    </style>
 </head>
-<body><table>
+<body>
+<table border="1" style="margin: 0 auto;">
         <tr>
             <th></th>
             <th>
-                IdTema
+                Numero del tema
             </th>
             <th>
-                Nombre
+                Nombre del tema
             </th>
         </tr>
 
@@ -21,7 +38,7 @@
     
         <tr>
             <td>
-                <%: Html.ActionLink("Edit", "EditTema", new { id=item.idTema }) %> |
+                <%: Html.ActionLink("Edit", "EditTema", new { id = item.idTema })%> |
                 <%: Html.ActionLink("Details", "DetailsTema", new { id = item.idTema })%> |
                 <%: Html.ActionLink("Delete", "DeleteTema", new { id = item.idTema })%>
             </td>
@@ -36,12 +53,21 @@
     <% } %>
 
     </table>
-    <p>
-        <%: Html.ActionLink("Nuevo Tema", "CreateTema") %>
+    <p>    
+        <br />
+        <br />
+        <div id="Power-Contenedor">      
+        <a href="/Tema/CreateTema" id="Anyadir-Rutina-btn">Nuevo tema</a>
+        <br />
+        <br />
     </p>
-
     <p>
-        <a href="/Home/Index">Regresar</a>
+    <br />
+    <br />
+    <div id="Power-Contenedor">
+    <a href="/Home/Index" id="Anyadir-Rutina-btn">Regresar</a>
+    <br />
+    <br />
     </p>
 </body>
 </html>

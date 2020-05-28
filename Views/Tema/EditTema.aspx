@@ -4,14 +4,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>EditTema</title>
+    <title>Editar tema</title>
 </head>
 <body>
     <% using (Html.BeginForm()) {%>
         <%: Html.ValidationSummary(true) %>
         
         <fieldset>
-            <legend>Fields</legend>
+            <legend>Datos</legend>
             
             
             <div class="editor-label">
@@ -23,14 +23,14 @@
             </div>
             
             <p>
-                <input type="submit" value="Save" />
+                <input type="submit" value="Guardar" />
             </p>
         </fieldset>
 
     <% } %>
 
     <div>
-        <%: Html.ActionLink("Back to List", "obtenerTema") %>
+        <a href="/Tema/ObtenerTema">Regresar</a>
     </div>
 
 </body>

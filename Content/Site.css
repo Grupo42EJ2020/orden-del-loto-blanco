@@ -53,3 +53,11 @@ form label{
 	font-weight:bold;
 	display:inline-block;
 }
+
+.tabla{
+border: 1px solid;
+}
+.tabla td{
+text-align:center;
+}
+

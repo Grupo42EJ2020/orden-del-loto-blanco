@@ -7,9 +7,9 @@
 <title>Borrar curso</title>
 </head>
 <body>
-    <h3>¿Estás seguro de borrar este video?</h3>
+    <h3>¿Estás seguro de borrar este curso?</h3>
     <fieldset>
-        <legend>Fields</legend>
+        <legend>Datos</legend>
         
         <div class="display-label">idCurso</div>
         <div class="display-field"><%: Model.IdCurso %></div>
@@ -24,7 +24,7 @@
     <% using (Html.BeginForm()) { %>
         <% } %>
         <p>
-		    <input type="submit" value="Delete" /> 
+		    <input type="submit" value="Eliminar" /> 
             </p>
             <p>
 		    <a href="/Curso/ObtenerCursos">Regresar</a>

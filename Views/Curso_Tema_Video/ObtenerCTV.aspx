@@ -5,19 +5,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>ObtenerCTV</title>
+    <style type="text/css">
+    #Power-Contenedor{
+    width: 100%;
+    text-align: center;
+    }
+
+    #Anyadir-Rutina-btn {
+    background-color: #21211d;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    }       
+    
+    </style>
 </head>
 <body>
-    <table>
+    <table border="1" style="margin: 0 auto;">
         <tr>
             <th></th>
             <th>
-                idCTV
+                Numero de curso_tema_video
             </th>
             <th>
-                idCT
+                Numero de curso_tema
             </th>
             <th>
-                idVideo
+                Numero de video
             </th>
         </tr>
 
@@ -45,8 +61,18 @@
     </table>
 
     <p>
-        <%: Html.ActionLink("Agregar", "CTVCreate") %>
-        <a href="/Home/Index">Regresar</a>
+    <br />
+        <br />
+        <div id="Power-Contenedor">
+    <a href="/Curso_Tema_Video/CTVCreate" id="Anyadir-Rutina-btn">Nuevo registro</a>
+    <br />
+        <br />
+    </p>
+    <p>
+    <br />
+        <br />
+        <div id="Power-Contenedor">
+    <a href="/Home/Index" id="Anyadir-Rutina-btn">Regresar</a>
     </p>
 
 </body>

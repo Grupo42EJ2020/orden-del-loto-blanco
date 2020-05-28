@@ -10,7 +10,7 @@
     
     <h3>¿Estás seguro que quieres eliminarlo?</h3>
     <fieldset>
-        <legend>Fields</legend>
+        <legend>Datos</legend>
         
         <div class="display-label">idCT</div>
         <div class="display-field"><%: Model.IdCT %></div>
@@ -24,7 +24,7 @@
     </fieldset>
     <% using (Html.BeginForm()) { %>
         <p>
-		    <input type="submit" value="Delete" /> |
+		    <input type="submit" value="Eliminar" /> |
 		    <%: Html.ActionLink("Regresar", "ObtenerCT") %>
         </p>
     <% } %>

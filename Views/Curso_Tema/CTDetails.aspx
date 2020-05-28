@@ -10,7 +10,7 @@
     
 
     <fieldset>
-        <legend>Fields</legend>
+        <legend>Datos</legend>
         
         <div class="display-label">IdCT</div>
         <div class="display-field"><%: Model.IdCT %></div>
@@ -24,7 +24,7 @@
     </fieldset>
     <p>
         
-        <%: Html.ActionLink("Regresar", "ObtenerCT") %>
+        <a href="/Curso_Tema/ObtenerCT">Regresar</a>
     </p>
 
 

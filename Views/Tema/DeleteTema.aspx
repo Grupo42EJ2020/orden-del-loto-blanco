@@ -4,12 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>DeleteTema</title>
+    <title>Eliminar tema</title>
 </head>
 <body>
-    <h3>Are you sure you want to delete this?</h3>
+    <h3>Seguro de eliminar este tema?</h3>
     <fieldset>
-        <legend>Fields</legend>
+        <legend>Datos</legend>
         
         <div class="display-label">idTema</div>
         <div class="display-field"><%: Model.idTema %></div>
@@ -20,8 +20,8 @@
     </fieldset>
     <% using (Html.BeginForm()) { %>
         <p>
-		    <input type="submit" value="Delete" /> |
-		    <%: Html.ActionLink("Back to List", "obtenerTema") %>
+		    <input type="submit" value="Eliminar" /> |
+		    <a href="/Tema/ObtenerTema">Regresar</a>
         </p>
     <% } %>
 

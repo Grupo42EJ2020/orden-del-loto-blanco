@@ -4,7 +4,25 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>CTCreate</title>
+    <title>Agregar Curso_Tema</title>
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    
+    <style type="text/css">
+    #Power-Contenedor{
+    width: 100%;
+    text-align: center;
+    }
+
+    #Anyadir-Rutina-btn {
+    background-color: #21211d;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    }       
+    
+    </style>
 </head>
 <body>
     
@@ -13,7 +31,7 @@
         <%: Html.ValidationSummary(true) %>
 
         <fieldset>
-            <legend>Fields</legend>
+            <legend>Datos</legend>
             
             
             
@@ -34,7 +52,7 @@
             </div>
             
             <p>
-                <input type="submit" value="Create" />
+                <input type="submit" value="Agregar" />
             </p>
         </fieldset>
 

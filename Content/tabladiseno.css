@@ -1,0 +1,12 @@
+.tabladiseno{
+border:1px solid;
+text-align:center;
+border-spacing:4px;
+border-collapse:collapse;
+}
+.tabladiseno td
+{
+    border:1px solid;
+    }
+    
+

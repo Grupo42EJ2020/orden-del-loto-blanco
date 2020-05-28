@@ -4,14 +4,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>VideoEdit</title>
+    <title>Editar video</title>
 </head>
 <body>
     <% using (Html.BeginForm()) {%>
         <%: Html.ValidationSummary(true) %>
         
         <fieldset>
-            <legend>Fields</legend>
+            <legend>Datos</legend>
             
             
             
@@ -40,7 +40,7 @@
             </div>
             
             <p>
-                <input type="submit" value="Editar" />
+                <input type="submit" value="Guardar" />
             </p>
         </fieldset>
 

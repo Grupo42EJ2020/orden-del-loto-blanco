@@ -13,7 +13,7 @@
         <%: Html.ValidationSummary(true) %>
         
         <fieldset>
-            <legend>Fields</legend>
+            <legend>Datos</legend>
             
             
             
@@ -44,7 +44,7 @@
 
             
             <p>
-                <input type="submit" value="Editar" />
+                <input type="submit" value="Guardar" />
             </p>
         </fieldset>
 

@@ -5,16 +5,33 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>ObtenerVideos</title>
+    <style type="text/css">
+    #Power-Contenedor{
+    width: 100%;
+    text-align: center;
+    }
+
+    #Anyadir-Rutina-btn {
+    background-color: #21211d;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    }       
+    
+    </style>
+    
 </head>
 <body>
-    <table>
+    <table border="1" style="margin: 0 auto;">
         <tr>
             <th></th>
             <th>
-                IdVideo
+                Numero del video
             </th>
             <th>
-                Nombre
+                Nombre del video
             </th>          
             
         </tr>
@@ -23,9 +40,9 @@
     
         <tr>
             <td>
-                <%: Html.ActionLink("Editar", "VideoEdit", new {  id=item.IdVideo  }) %> |
-                <%: Html.ActionLink("Detalles", "VideoDetails", new {  id=item.IdVideo })%> |
-                <%: Html.ActionLink("Borrar", "VideoDelete", new {  id=item.IdVideo  })%>
+                <%: Html.ActionLink("Editar", "VideoEdit", new { id = item.IdVideo } )%> |
+                <%: Html.ActionLink("Detalles", "VideoDetails", new { id = item.IdVideo })%> |
+                <%: Html.ActionLink("Borrar", "VideoDelete", new { id = item.IdVideo })%>
             </td>
             <td>
                 <%: item.IdVideo %>
@@ -42,9 +59,22 @@
     </table>
 
     <p>
-        <%: Html.ActionLink("Nuevo Video", "VideoCreate")%>
+        <br />
+        <br />
+        <div id="Power-Contenedor">
+        <a href="/Video/VideoCreate" id="Anyadir-Rutina-btn">Nuevo video</a>
+        <br />
+        <br />
     </p>
-    <a href="/Home/Index">Regresar</a>
+    <p>
+        <br />
+        <br />
+        <div id="Power-Contenedor">
+    <a href="/Home/Index" id="Anyadir-Rutina-btn">Regresar</a>
+        <br />
+        <br />
+    </p>
+    
 
 </body>
 </html>

@@ -4,23 +4,39 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>ObtenerCursos</title>
-
-</head>
-<body></body>
+    
     <title>Ver todos los cursos</title>
+    <style type="text/css">
+    #Power-Contenedor{
+    width: 100%;
+    text-align: center;
+    }
+
+    #Anyadir-Rutina-btn {
+    background-color: #21211d;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    }       
+    
+    </style>
 </head>
 <body>
     
 
-    <table>
+    <table border="1" style="margin: 0 auto;">
         <tr>
             <th></th>
             <th>
-                IdCurso
+                Numero de curso
             </th>
             <th>
                 Descripcion
+            </th>
+            <th>
+                Empleado encargado
             </th>          
             
         </tr>
@@ -37,7 +53,10 @@
                 <%: item.IdCurso%>
             </td>
             <td>
-                <%: item.IdCurso%>
+                <%: item.Descripcion%>
+            </td>
+            <td>
+                <%: item.IdEmpleado%>
             </td>
            
             
@@ -48,9 +67,22 @@
     </table>
 
     <p>
-        <%: Html.ActionLink("Agregar un nuevo curso", "CursoCreate")%>
+    <br />
+        <br />
+        <div id="Power-Contenedor">
+        <a href="/Curso/CursoCreate" id="Anyadir-Rutina-btn">Nuevo curso</a>
+        <br />
+        <br />
     </p>
-    <a href="/Home/Index">Regresar</a>
+    <p>
+    <br />
+        <br />
+        <div id="Power-Contenedor">
+    <a href="/Home/Index" id="Anyadir-Rutina-btn">Regresar</a>
+    <br />
+        <br />
+    </p>
+    
 
 
 

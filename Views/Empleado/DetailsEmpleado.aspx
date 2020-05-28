@@ -4,11 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>DetailsEmpleado</title>
+    <title>Detalles empleado</title>
+    
 </head>
 <body>
     <fieldset>
-        <legend>Fields</legend>
+        <legend>Datos</legend>
         
         <div class="display-label">idEmpleado</div>
         <div class="display-field"><%: Model.idEmpleado %></div>

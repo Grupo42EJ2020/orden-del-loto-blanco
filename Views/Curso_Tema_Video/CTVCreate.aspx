@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>CTVCreate</title>
+    <title>Agregar CTV</title>
     <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
     
     <style type="text/css">
@@ -29,7 +29,7 @@
         <%: Html.ValidationSummary(true) %>
 
         <fieldset>
-            <legend>Fields</legend>
+            <legend>Datos</legend>
             
             
             
@@ -50,7 +50,7 @@
             </div>
             
             <p>
-                <input type="submit" value="Create" />
+                <input type="submit" value="Agregar" />
             </p>
         </fieldset>
 
