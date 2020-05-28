@@ -31,41 +31,41 @@
     <br />
     <div id="Power-Contenedor">
 
-    <a href="/Empleado/ObtenerEmpleado" id="Anyadir-Rutina-btn"> Añadir Empleado </a>
+    <a href="/Empleado/ObtenerEmpleado" id="Anyadir-Rutina-btn">Empleado</a>
 
     </div>
     <br />
     <br />
     <div id="Power-Contenedor">
 
-    <a href="/Video/ObtenerVideos" id="Anyadir-Rutina-btn"> Añadir Video </a>
+    <a href="/Video/ObtenerVideos" id="Anyadir-Rutina-btn">Video</a>
 
     </div>
     <br />
     <br />
     <div id="Power-Contenedor">
 
-    <a href="/Tema/ObtenerTema" id="Anyadir-Rutina-btn"> Añadir Tema </a>
+    <a href="/Tema/ObtenerTema" id="Anyadir-Rutina-btn">Tema</a>
 
     </div>
     <br />
     <br />
     <div id="Power-Contenedor">
 
-    <a href="/Curso/ObtenerCursos" id="Anyadir-Rutina-btn"> Añadir Curso </a>
+    <a href="/Curso/ObtenerCursos" id="Anyadir-Rutina-btn">Curso</a>
 
     </div>
     <br />
     <br />
     <div id="Power-Contenedor">
 
-    <a href="/Curso_Tema/ObtenerCT" id="Anyadir-Rutina-btn"> Tema, Curso</a>
+    <a href="/Curso_Tema/ObtenerCT" id="Anyadir-Rutina-btn">Tema, Curso</a>
 
     </div>
     <br />
     <br />
 
-    <a href="/Curso_Tema_Video/ObtenerCTV" id="Anyadir-Rutina-btn"> Tema, Curso, Video </a>
+    <a href="/Curso_Tema_Video/ObtenerCTV" id="Anyadir-Rutina-btn">Tema, Curso, Video</a>
 
     </div>
     <br />

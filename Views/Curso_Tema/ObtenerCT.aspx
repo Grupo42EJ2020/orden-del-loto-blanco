@@ -43,9 +43,9 @@
     
         <tr>
             <td>
-                <%: Html.ActionLink("Edit", "CTCreate", new { id = item.IdCT })%> |
-                <%: Html.ActionLink("Details", "CTDetails", new { id = item.IdCurso })%> |
-                <%: Html.ActionLink("Delete", "CTDelete", new { id = item.IdTema })%>
+                <%: Html.ActionLink("Editar", "CTCreate", new { id = item.IdCT })%> |
+                <%: Html.ActionLink("Detalles", "CTDetails", new { id = item.IdCurso })%> |
+                <%: Html.ActionLink("Borrar ", "CTDelete", new { id = item.IdTema })%>
             </td>
             <td>
                 <%: item.IdCT %>

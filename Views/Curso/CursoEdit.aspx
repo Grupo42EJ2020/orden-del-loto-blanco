@@ -5,6 +5,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>Modificar un curso</title>
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    #Power-Contenedor{
+    width: 100%;
+    text-align: center;
+    }
+
+    #Anyadir-Rutina-btn {
+    background-color: #21211d;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    }       
+    
+    </style>
 </head>
 <body>
     
@@ -51,7 +68,10 @@
     <% } %>
 
     <div>
-        <a href="/Curso/ObtenerCursos">Regresar</a>
+    <br />
+        <br />
+        <div id="Power-Contenedor">
+        <a href="/Curso/ObtenerCursos" id="Anyadir-Rutina-btn">Regresar</a>
     </div>
 
 

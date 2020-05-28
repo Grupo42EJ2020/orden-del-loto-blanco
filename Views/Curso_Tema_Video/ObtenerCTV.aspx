@@ -41,9 +41,9 @@
     
         <tr>
             <td>
-                <%: Html.ActionLink("Edit", "CTVEdit", new { id = item.idCTV })%> |
-                <%: Html.ActionLink("Details", "CTVDetails", new { id = item.idCTV })%> |
-                <%: Html.ActionLink("Delete", "CTVDelete", new { id = item.idCTV })%>
+                <%: Html.ActionLink("Editar", "CTVEdit", new { id = item.idCTV })%> |
+                <%: Html.ActionLink("Detalles", "CTVDetails", new { id = item.idCTV })%> |
+                <%: Html.ActionLink("Borrar", "CTVDelete", new { id = item.idCTV })%>
             </td>
             <td>
                 <%: item.idCTV %>

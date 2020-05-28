@@ -38,9 +38,9 @@
     
         <tr>
             <td>
-                <%: Html.ActionLink("Edit", "EditTema", new { id = item.idTema })%> |
-                <%: Html.ActionLink("Details", "DetailsTema", new { id = item.idTema })%> |
-                <%: Html.ActionLink("Delete", "DeleteTema", new { id = item.idTema })%>
+                <%: Html.ActionLink("Editar", "EditTema", new { id = item.idTema })%> |
+                <%: Html.ActionLink("Detalles", "DetailsTema", new { id = item.idTema })%> |
+                <%: Html.ActionLink("Borrar", "DeleteTema", new { id = item.idTema })%>
             </td>
             <td>
                 <%: item.idTema %>

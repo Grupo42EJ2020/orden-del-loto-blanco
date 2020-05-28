@@ -5,6 +5,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>Detalles CTV</title>
+    <link rel="stylesheet" type="text/css" href="../../Content/Site.css" />
+    <style type="text/css">
+    #Power-Contenedor{
+    width: 100%;
+    text-align: center;
+    }
+
+    #Anyadir-Rutina-btn {
+    background-color: #21211d;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    }       
+    
+    </style>
 </head>
 <body>
     <fieldset>
@@ -21,8 +38,8 @@
         
     </fieldset>
     <p>
-        
-        <<a href="/Curso_Tema_Video/ObtenerCTV">Regresar</a>
+        <div id="Power-Contenedor">
+        <a href="/Curso_Tema_Video/ObtenerCTV" id="Anyadir-Rutina-btn">Regresar</a>
     </p>
 
 </body>

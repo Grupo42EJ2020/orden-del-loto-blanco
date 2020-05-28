@@ -61,3 +61,9 @@ border: 1px solid;
 text-align:center;
 }
 
+.fieldset{
+  border: 1px solid rgb(255,232,57);
+  width: 400px;
+  float: left;
+}
+

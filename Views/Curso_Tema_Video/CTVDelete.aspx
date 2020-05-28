@@ -5,6 +5,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>Eliminar CTV</title>
+    <style type="text/css">
+    #Power-Contenedor{
+    width: 100%;
+    text-align: center;
+    }
+
+    #Anyadir-Rutina-btn {
+    background-color: #21211d;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    }       
+    
+    </style>
+	
 </head>
 <body>
     <h3>Seguro de eliminar esto?</h3>
@@ -23,8 +40,16 @@
     </fieldset>
     <% using (Html.BeginForm()) { %>
         <p>
-		    <input type="submit" value="Delete" /> |
-		    <a href="/Curso_Tema_Video/ObtenerCTV">Regresar</a>
+        <br />
+        <br />
+        <div id="Power-Contenedor">
+		    <input type="submit" value="Eliminar" id="Anyadir-Rutina-btn"/>
+            </p>
+            <p>
+            <a href="/Curso_Tema_Video/ObtenerCTV" id="Anyadir-Rutina-btn">Regresar</a>
+            <br />
+        <br />
+        </div>
         </p>
     <% } %>
 
